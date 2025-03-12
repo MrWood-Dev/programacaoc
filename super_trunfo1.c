@@ -1,16 +1,5 @@
 #include <stdio.h>
 
-
-float calculaDensPopulacao(populacao,area) {
-    float densidade = populacao/area;
-    return densidade;
-}
-
-float CalculaPib(pib,populacao) {
-    float pibPerCapita = pib/populacao;
-    return pibPerCapita;
-}
-
 int main() {
 
     // inicializando as variáveis da carta 1
@@ -21,8 +10,6 @@ int main() {
     float areaC1;
     float pibC1;
     int ptsturC1;
-    float densidadePopC1;
-    float pibPerCapitaC1;
 
 
     // inicializando as variaveis da carta 2
@@ -33,8 +20,6 @@ int main() {
     float areaC2;
     float pibC2;
     int ptsturC2;
-    float densidadePopC2;
-    float pibPerCapitaC2;
 
 
     // solicitando os dados da carta 1
@@ -54,8 +39,6 @@ int main() {
     scanf ("%f", &pibC1);
     printf ("\nQuantidade de pontos turísticos :");
     scanf ("%i", &ptsturC1);
-    densidadePopC1 = calculaDensPopulacao(populacaoC1,areaC1);
-    pibPerCapitaC1 = CalculaPib(pibC1,populacaoC1);    
 
     printf ("\n\n\n\n");
 
@@ -76,8 +59,6 @@ int main() {
     scanf ("%f", &pibC2);
     printf ("\nQuantidade de pontos turísticos :");
     scanf ("%i", &ptsturC2);
-    densidadePopC2 = calculaDensPopulacao(populacaoC2,areaC2);
-    pibPerCapitaC2 = CalculaPib(pibC2,populacaoC2);
 
     printf ("\n\n\n\n");
 
@@ -90,9 +71,6 @@ int main() {
     printf ("Área : %f Km2\n", areaC1);
     printf ("PIB : %f bilhões de reais\n", pibC1);
     printf ("Quantidade de Pontos turísticos : %i\n", ptsturC1);
-    printf ("Densidade Populacional : %f\n", densidadePopC1);
-    printf ("PIB per Capita : %f\n", pibPerCapitaC1);
-    
 
     printf ("\n\n\n\n");
 
@@ -106,12 +84,6 @@ int main() {
     printf ("Área : %f Km2\n", areaC2);
     printf ("PIB : %f bilhões de reais\n", pibC2);
     printf ("Quantidade de Pontos turísticos : %i\n", ptsturC2);
-    printf ("Densidade Populacional : %f\n", densidadePopC2);
-    printf ("PIB per Capita : %f\n", pibPerCapitaC2);
-
-
-
-
 
 
    return 0; //fim do programa
