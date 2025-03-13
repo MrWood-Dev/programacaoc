@@ -1,14 +1,19 @@
 #include <stdio.h>
 
 
+
 float calculaDensPopulacao(float populacao,float area) {
-    float densidade = populacao/area;
-    return densidade;
+    
+    float densidade;
+    densidade = populacao/area;
+    return(densidade);
 }
 
-float CalculaPib(float pib,float populacao) {
-    float pibPerCapita = pib/populacao;
-    return pibPerCapita;
+float calculaPib(float pib,float populacao) {
+
+    float pibPerCapita;
+    pibPerCapita = pib/populacao;
+    return(pibPerCapita);
 }
 
 int main() {
@@ -55,7 +60,7 @@ int main() {
     printf ("\nQuantidade de pontos turísticos :");
     scanf ("%i", &ptsturC1);
     densidadePopC1 = calculaDensPopulacao(populacaoC1,areaC1);
-    pibPerCapitaC1 = CalculaPib(pibC1,populacaoC1);    
+    pibPerCapitaC1 = calculaPib(pibC1,populacaoC1);    
 
     printf ("\n\n\n\n");
 
@@ -77,7 +82,7 @@ int main() {
     printf ("\nQuantidade de pontos turísticos :");
     scanf ("%i", &ptsturC2);
     densidadePopC2 = calculaDensPopulacao(populacaoC2,areaC2);
-    pibPerCapitaC2 = CalculaPib(pibC2,populacaoC2);
+    pibPerCapitaC2 = calculaPib(pibC2,populacaoC2);
 
     printf ("\n\n\n\n");
 
@@ -90,8 +95,8 @@ int main() {
     printf ("Área : %f Km2\n", areaC1);
     printf ("PIB : %f bilhões de reais\n", pibC1);
     printf ("Quantidade de Pontos turísticos : %i\n", ptsturC1);
-    printf ("Densidade Populacional : %f\n", densidadePopC1);
-    printf ("PIB per Capita : %f\n", pibPerCapitaC1);
+    printf ("Densidade Populacional : %f hab/km2\n", densidadePopC1);
+    printf ("PIB per Capita : %f reais\n", pibPerCapitaC1);
     
 
     printf ("\n\n\n\n");
@@ -106,8 +111,8 @@ int main() {
     printf ("Área : %f Km2\n", areaC2);
     printf ("PIB : %f bilhões de reais\n", pibC2);
     printf ("Quantidade de Pontos turísticos : %i\n", ptsturC2);
-    printf ("Densidade Populacional : %f\n", densidadePopC2);
-    printf ("PIB per Capita : %f\n", pibPerCapitaC2);
+    printf ("Densidade Populacional : %f hab/km2\n", densidadePopC2);
+    printf ("PIB per Capita : %f reais\n", pibPerCapitaC2);
 
 
 
