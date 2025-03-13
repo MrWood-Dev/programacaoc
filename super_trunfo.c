@@ -2,14 +2,14 @@
 
 
 
-float calculaDensPopulacao(float populacao,float area) {
+float calculaDensPopulacao(float populacao,float area) { //função para cálculo da densidade populacional das cidades
     
     float densidade;
     densidade = populacao/area;
     return(densidade);
 }
 
-float calculaPib(float pib,float populacao) {
+float calculaPib(float pib,float populacao) { // função para cálculo da PIB percapita das cidades
 
     float pibPerCapita;
     pibPerCapita = pib/populacao;
