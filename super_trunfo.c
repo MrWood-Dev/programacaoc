@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 
-float calculaDensPopulacao(populacao,area) {
+float calculaDensPopulacao(float populacao,float area) {
     float densidade = populacao/area;
     return densidade;
 }
 
-float CalculaPib(pib,populacao) {
+float CalculaPib(float pib,float populacao) {
     float pibPerCapita = pib/populacao;
     return pibPerCapita;
 }
