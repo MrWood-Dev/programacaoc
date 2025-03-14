@@ -126,9 +126,24 @@ int main() {
 
     printf ("\n\n\n\n");
 
-    // comparação das cartas
+    // comparação das cartas com o atributo PIB per capita
 
-    printf("Comparação das cartas\n\n");
+    printf("Comparação das cartas (Atributo : PIB per capita)\n\n");
+    
+    printf("Carta 1 - %s : %f\n\n", nomecidadeC1,pibPerCapitaC1);
+    printf("Carta 2 - %s : %f\n\n", nomecidadeC2,pibPerCapitaC2);
+
+    if(pibPerCapitaC1 == pibPerCapitaC2) {
+        printf("Empate das Cartas");
+    }
+    if(pibPerCapitaC1 > pibPerCapitaC2) {
+        printf("%s Venceu!",nomecidadeC1);
+    }
+    if(pibPerCapitaC1 < pibPerCapitaC2) {
+        printf("%s Venceu!",nomecidadeC2);
+    }
+
+    /*
     printf("População : a Carta 1 Venceu (%i)\n", (populacaoC1 > populacaoC2));
     printf("Área : a Carta 1 Venceu (%i)\n", (areaC1 > areaC2));
     printf("PIB : a Carta 1 Venceu (%i)\n", (pibC1 > pibC2));
@@ -136,7 +151,7 @@ int main() {
     printf("Densidade Populacional : a Carta 1 Venceu (%i)\n", (densidadePopC1 < densidadePopC2));
     printf("PIB per Capita : a Carta 1 Venceu (%i)\n", (pibPerCapitaC1 > pibPerCapitaC2));
     printf("Super Poder : a Carta 1 Venceu (%d)\n", (superPoderC1 > superPoderC2));
-
+    */
 
 
 
