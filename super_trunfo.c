@@ -275,9 +275,11 @@ int main()
                 printf("A Carta 2 - %s Venceu!", nomecidadeC2);
             }
             break;
+
             default:
-            printf("Atributo Inválido!");
+                printf("Atributo Inválido!");
         }
+
     } else if (opcao1 == 2)
     {
         printf("Escolha o 2° atributo da carta?\n\n");
@@ -434,8 +436,9 @@ int main()
                 printf("A Carta 2 - %s Venceu!", nomecidadeC2);
             }
             break;
+
             default:
-            printf("Atributo Inválido!");
+                printf("Atributo Inválido!");
         }
 
     } else if (opcao1 == 3)
@@ -594,9 +597,11 @@ int main()
                 printf("A Carta 2 - %s Venceu!", nomecidadeC2);
             }
             break;
+
             default:
-            printf("Atributo Inválido!");
+                printf("Atributo Inválido!");
         }
+        
     } else if (opcao1 == 4)
     {
         printf("Escolha o 2° atributo da carta?\n\n");
@@ -753,9 +758,11 @@ int main()
                 printf("A Carta 2 - %s Venceu!", nomecidadeC2);
             }
             break;
+
             default:
-            printf("Atributo Inválido!");
+                printf("Atributo Inválido!");
         }
+
     } else if (opcao1 == 5)
     {
         printf("Escolha o 2° atributo da carta?\n\n");
@@ -913,9 +920,11 @@ int main()
                 printf("A Carta 2 - %s Venceu!", nomecidadeC2);
             }
             break;
+
             default:
-            printf("Atributo Inválido!");
+                printf("Atributo Inválido!");
         }
+
     } else if (opcao1 == 6)
     {
         printf("\n\nEscolha o 2° atributo da carta?\n\n");
@@ -1072,9 +1081,11 @@ int main()
                 printf("A Carta 2 - %s Venceu!", nomecidadeC2);
             }
             break;
+
             default:
-            printf("Atributo Inválido!");
+                printf("Atributo Inválido!");
         }
+
     } else if (opcao1 == 7)
     {
         printf("Escolha o 2° atributo da carta?\n\n");
@@ -1231,9 +1242,11 @@ int main()
                 printf("A Carta 2 - %s Venceu!", nomecidadeC2);
             }
             break;
+
             default:
-            printf("Atributo Inválido!");
+                printf("Atributo Inválido!");
         }
+
     }
     if (opcao1 < 1 || opcao1 > 7)
     {
