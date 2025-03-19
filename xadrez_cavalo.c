@@ -1,18 +1,25 @@
 #include <stdio.h>
 
-int main() {
-
-    for (int h = 1; h <= 1; h++) // inicio do laço para o movimento horizontal do cavalo
+void moveCavalocimaDireita(int v,int h) { // função que move o cavalo na diagonal para cima e para a direita
+    for (h; h <= 1; h++) // inicio do laço para o movimento do cavalo
     {
-        int v = 1;
-        while (v <= 2) // inicio do laço aninhado para o movimento vertical do cavalo
+        while (v <= 2)
         {
-            printf("%i-Baixo\t", v); // move o cavalo na vertical
+            printf("%i-cima\n", v); // move o cavalo para cima
             v++;
         }
         
-        printf("\n%i-Esquerda\n\n",h); // move o cavalo na horizontal
+        printf("%i - Direita\n",h); // move o cavalo uma casa para a direita
     }
+}
+
+
+int main() {
+
+    int vertical = 1;
+    int horizontal = 1;
+
+    moveCavalocimaDireita(vertical,horizontal);
     
     return 0;
 } // fim do programa
