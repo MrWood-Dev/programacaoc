@@ -1,9 +1,20 @@
 #include <stdio.h>
 
 
-// função para testar se a posição está ocupada antes de posicionar o navio
+// função para testar se a posição está ocupada antes de posicionar o navio e se o navio se encontra nos limites do tabuleiro
 int testaNavio(int tabuleiro[10][10],int linha,int coluna){
-    return tabuleiro[linha][coluna]==0;
+    if (linha >= 1 && linha <= 10) {
+        if (coluna >=1 && coluna <= 10)
+        {
+            return tabuleiro[linha][coluna]==0;
+        } else {
+            return 0;
+        }
+        
+        
+    }else {
+        return 0;
+    }    
 }
 
 
