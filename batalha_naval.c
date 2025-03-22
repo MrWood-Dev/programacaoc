@@ -20,6 +20,9 @@ int testaNavio(int tabuleiro[10][10],int linha,int coluna){
 
 int main() {
 
+int tabuleirocone[10][10];
+int tabuleirocruz[10][10];
+int tabuleiroocta[10][10];
 int tabuleiro[10][10];
 int navioh[3]={3,4,5};
 int naviov[3]={5,6,7};
@@ -30,7 +33,7 @@ int naviodc2[3]={5,4,3};
 int teste = 0;
 
 
-// prepara o tabueliro com zeros
+    // prepara o tabuleiro com zeros
 
     for(int l=0;l<10;l++) {
         for(int c=0;c<=9;c++){
@@ -38,6 +41,32 @@ int teste = 0;
         }
     }
 
+    // prepara o tabuleiro do cone
+
+    for(int l=0;l<10;l++) {
+        for(int c=0;c<=9;c++){
+            tabuleirocone[l][c] = 0;
+        }
+    }
+
+    // prepara o tabuleiro da cruz
+
+    for (int l=0;l<10;l++)
+    {
+        for(int c=0;c<=9;c++){
+            tabuleirocruz[l][c] = 0;
+        }
+    }
+
+    // prepara o tabuleiro do octaedro
+
+    for (int l=0;l<10;l++)
+    {
+        for(int c=0;c<=9;c++){
+            tabuleiroocta[l][c] = 0;
+        }
+    }
+    
 
         // posiciona os navios testando a sobreposição ao anteriormente criado
 
@@ -101,19 +130,100 @@ int teste = 0;
                 teste=0;
             }
         }
-        // preparando a apresentação do tabuleiro
-        char cabecalho[11]={'A','B','C','D','E','F','G','H','I','J'};
-        printf(" \t");
-        for (int i=0; i<10; i++ ){
-            printf("%c\t", cabecalho[i]);
+
+        // preparando o cone
+        int vezes = 0;
+        int coluna = 4;
+        int alturacone = 6;
+        for (int i = 0; i < alturacone; i++)
+        {
+            for (int j = 0; j <= vezes; j++)
+            {
+                printf("eu passei aqui %i vezes\n", j);
+                tabuleirocone[i][coluna+j]=1;
+            }
+            coluna-=1;
+            vezes+=2;
+            printf("\n\n");
         }
-        printf("\n\n");
+
+        // preparando a cruz
+        
+        for (int i = 0, j = 4; i < 10; i++)
+        {
+            tabuleirocruz[i][j]=1;
+            tabuleirocruz[i][j+1]=1;
+            tabuleirocruz[j][i]=1;
+            tabuleirocruz[j+1][i]=1;
+        }
+
+        // preparando o octaedro
+        vezes = 0;
+        coluna = 4;
+        int alturaduplaocta=6;
+        for (int cima = 0, baixo = 9; cima < alturaduplaocta; cima++, baixo--)
+        {
+            for (int j = 0; j <= vezes; j++)
+            {
+                tabuleiroocta[cima][coluna+j]=1;
+                tabuleiroocta[baixo][coluna+j]=1;
+            }
+            coluna-=1;
+            vezes+=2;
+            printf("\n\n");
+        }
+
+        
+        // preparando a apresentação dos cabeçalhos
+        char cabecalho[11]={'A','B','C','D','E','F','G','H','I','J'};
+        printf("\t\t");
+        for (int i=0; i<10; i++ ){
+            printf("%c", cabecalho[i]);
+            
+        }
+
+        printf("\t\t");
+
+        for (int i=0; i<10; i++ ){
+            printf("%c", cabecalho[i]);
+            
+        }
+
+        printf("\t\t");
+        
+        for (int i=0; i<10; i++ ){
+            printf("%c", cabecalho[i]);
+            
+        }
+
+        printf("\t\t");
+        
+        for (int i=0; i<10; i++ ){
+            printf("%c", cabecalho[i]);
+            
+        }
+
+        // apresentando os tabuleiros
+        printf("\n\t");
         for (int l = 0;l<10;l++){
             printf("%i\t",l+1);
             for(int c=0;c<10;c++){
-                printf("%i\t", tabuleiro[l][c]);
+                printf("%i", tabuleiro[l][c]);
             }
-            printf("\n\n");
+            printf("\t\t");
+            for(int c=0;c<10;c++){
+                printf("%i", tabuleirocone[l][c]);
+            }
+            printf("\t\t");
+            for(int c=0;c<10;c++){
+                printf("%i", tabuleirocruz[l][c]);
+            }
+            printf("\t\t");
+            for(int c=0;c<10;c++){
+                printf("%i", tabuleiroocta[l][c]);
+            }
+            printf("\n\t");
+
         }
        
 
